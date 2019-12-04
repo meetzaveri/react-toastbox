@@ -1,0 +1,132 @@
+@import "./common.scss";
+
+$success_color: #32b67a;
+$error_color: #ff0000;
+$primary_color: #0079d3;
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+.toaster {
+  -ms-flex-align: center;
+  align-items: center;
+  background: white;
+  border: 1px solid #24a0ed;
+  border-radius: 4px;
+  box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 12px;
+  min-height: 52px;
+  padding-left: 8px;
+  position: relative;
+  transition: padding 0.3s;
+  width: 476px;
+  opacity: 1;
+  x: 1px;
+  y: 0px;
+  transform: translateY(0px) scale(1, 1);
+  border-color: #24a0ed;
+  cursor: pointer;
+}
+
+.toaster:before {
+  background-color: #24a0ed;
+  border: 1px solid #24a0ed;
+  border-radius: 4px 0 0 4px;
+  content: "";
+  height: 100%;
+  left: 0;
+  margin: -1px;
+  position: absolute;
+  top: 0;
+  width: 8px;
+}
+
+.toast_position_top_right {
+  top: 1em;
+  right: 11em;
+}
+
+.toast_position_top_left {
+  top: 1em;
+  left: 1em;
+}
+
+.toast_position_bottom_right {
+  bottom: 1em;
+  right: 11em;
+}
+
+.toast_position_bottom_left {
+  bottom: 1em;
+  left: 1em;
+}
+
+.toast_paint_success {
+  border: 1px solid $success_color;
+  &:before {
+    background-color: $success_color;
+    border: 1px solid $success_color;
+  }
+}
+
+.toast_paint_primary {
+  border: 1px solid $primary_color;
+  &:before {
+    background-color: $primary_color;
+    border: 1px solid $primary_color;
+  }
+}
+
+.toast_paint_danger {
+  border: 1px solid $error_color;
+  &:before {
+    background-color: $error_color;
+    border: 1px solid $error_color;
+  }
+}
+
+.toast-container {
+  z-index: 99999;
+  -webkit-transform: translateZ(9999px);
+  position: fixed;
+  padding: 4px;
+  width: 320px;
+  box-sizing: border-box;
+  color: #fff;
+}
+
+.toast-content-container {
+  display: flex;
+  flex: 0.97 0;
+}
+.toast-content {
+  font-family: Noto Sans, Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #000;
+  -ms-flex: 1;
+  flex: 1;
+  margin: 0 12px;
+  text-align: left;
+}
+
+@keyframes zoominoutsinglefeatured {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.2, 1.2);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+.toast-container {
+  animation: zoominoutsinglefeatured 0.2s ease-out;
+}
