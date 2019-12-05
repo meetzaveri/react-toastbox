@@ -5,7 +5,7 @@ $error_color: #ff0000;
 $primary_color: #0079d3;
 
 .App {
-  font-family: sans-serif;
+  font-family: inherit;
   text-align: center;
 }
 .toaster {
@@ -119,9 +119,9 @@ $primary_color: #0079d3;
   flex: 0.97 0;
 }
 .toast-content {
-  font-family: Noto Sans, Arial, sans-serif;
+  font-family: inherit;
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 21px;
   color: #000;
   -ms-flex: 1;
