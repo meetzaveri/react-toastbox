@@ -55,7 +55,7 @@ npm install react-toastbox
     <tr>
       <td>position</td>
       <td>String</td>
-      <td>'top_right'</td>
+      <td>'top-right'</td>
       <td>Position for toast to be displayed.</td>
     </tr>
     <tr>
@@ -70,19 +70,15 @@ npm install react-toastbox
 ## Possible values for API
 
 ```js
- positionClasses: [
-        'top_right',
-        'top_left',
-        'top_center',
-        'bottom_right',
-        'bottom_left',
-        'bottom_center'
- ]
-paints: [
-        'success',
-        'warning',
-        'danger'
-],
+positionClasses = [
+  "top-right",
+  "top-left",
+  "top-center",
+  "bottom-right",
+  "bottom-left",
+  "bottom-center"
+];
+paints = ["success", "warning", "danger"];
 ```
 
 ## Usage

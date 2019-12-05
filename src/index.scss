@@ -37,7 +37,7 @@ $primary_color: #0079d3;
   border: 1px solid #24a0ed;
   border-radius: 4px 0 0 4px;
   content: "";
-  height: 100%;
+  height: 101%;
   left: 0;
   margin: -1px;
   position: absolute;
@@ -143,5 +143,5 @@ $primary_color: #0079d3;
 }
 
 .toast-container {
-  animation: zoominoutsinglefeatured 0.2s ease-out;
+  animation: zoominoutsinglefeatured 0.35s ease-out;
 }
