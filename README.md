@@ -12,7 +12,9 @@ Using npm:
 npm install react-toastbox
 ```
 
-### Codesandbox demo [here](https://codesandbox.io/s/2452rqmjqr)
+## Codesandbox demo
+
+[![Edit react-toastbox-demo](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/react-new?fontsize=14&hidenavigation=1&theme=dark)
 
 ## Screenshots
 
