@@ -57,7 +57,7 @@ class App extends React.Component {
   render() {
     return (
       <div id="app-toast" className="App">
-        <button onClick={this.handleOnClick}>Open</button>
+        {/* <button onClick={this.handleOnClick}>Open</button> */}
         {this.state.show && (
           <Toaster
             {...this.props}
