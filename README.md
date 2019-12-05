@@ -16,7 +16,7 @@ npm install react-toastbox
 
 ## Screenshots
 
-![Toaster](https://i.imgur.com/HNX6hC9.png)
+![Toaster](https://i.imgur.com/5CDEUf9.png)
 
 ## API
 
