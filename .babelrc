@@ -4,7 +4,7 @@
     "@babel/proposal-class-properties",
     "@babel/transform-react-jsx",
     [
-      "module-resolver",
+      "babel-plugin-module-resolver",
       {
         "root": ["./src"],
         "alias": {

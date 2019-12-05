@@ -28,23 +28,12 @@ module.exports = {
       }
     ]
   },
-  plugins: [
-    htmlWebpackPlugin,
-    [
-      "module-resolver",
-      {
-        root: ["./src"],
-        alias: {
-          src: "./src"
-        }
-      }
-    ]
-  ],
+  plugins: [htmlWebpackPlugin],
 
   resolve: {
     alias: {
-      src: path.resolve("./src"),
-      src: path.resolve(__dirname, "src/")
+      src: path.resolve("./src")
+      // src: path.resolve(__dirname, "src/")
     },
     extensions: [".js", ".jsx"]
   },
