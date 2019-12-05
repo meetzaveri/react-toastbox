@@ -81,6 +81,21 @@ $primary_color: #0079d3;
   }
 }
 
+.toast-bg-success {
+  background-color: $success_color;
+  color: #fff;
+}
+
+.toast-bg-danger {
+  background-color: $error_color;
+  color: #fff;
+}
+
+.toast-bg-primary {
+  background-color: $primary_color;
+  color: #fff;
+}
+
 .toast_paint_danger {
   border: 1px solid $error_color;
   &:before {
