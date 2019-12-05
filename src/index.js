@@ -84,8 +84,8 @@ export const toast = {
   }
 };
 
-setTimeout(() => {
-  toast.error();
-}, 2000);
+// setTimeout(() => {
+//   toast.error();
+// }, 2000);
 const rootElement = document.getElementById("toast-root");
-ReactDOM.render(<App />, rootElement);
+// ReactDOM.render(<App />, rootElement);
