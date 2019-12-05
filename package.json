@@ -1,6 +1,6 @@
 {
   "name": "react-toastbox",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "A minimal react toast box inspired by reddit's toast message design and react-toastify.",
   "author": "Meet Zaveri",
   "license": "MIT",
