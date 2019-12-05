@@ -60,7 +60,7 @@ class Toast extends React.Component {
     this.setState({ positionClasses, paints });
   }
 
-  createDesignClass = () => {
+  getPosition = () => {
     const state = { ...this.state.positionClasses };
     let newObj = {};
     const values = Object.values(state);
@@ -71,7 +71,7 @@ class Toast extends React.Component {
     return newObj;
   };
 
-  createPaintClass = () => {
+  getIntent = () => {
     const state = { ...this.state.paints };
     let newObj = {};
     const values = Object.values(state);
@@ -101,19 +101,19 @@ class Toast extends React.Component {
   }
 
   render() {
-    const positionClasses = this.createDesignClass();
-    const paintClasses = this.createPaintClass();
+    const positionClasses = this.getPosition();
+    const intentClasses = this.getIntent();
     const containerClass = classNames(
       { "toast-container": true },
       positionClasses
     );
-    const toastPaint = classNames({ toaster: true }, paintClasses);
-    // console.log("toastPaint", toastPaint);
+    const toastIntent = classNames({ toaster: true }, intentClasses);
+    // console.log("toastIntent", toastIntent);
     return (
       <React.Fragment>
         <div className={containerClass}>
           <div
-            className={toastPaint}
+            className={toastIntent}
             onMouseEnter={() => {
               this.props.pauseOnHover && this.handleMouseEnter();
             }}

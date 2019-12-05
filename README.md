@@ -34,12 +34,12 @@ npm install react-toastbox
   </tr>
   </thead>
   <tbody>
-    <tr>
+    <!-- <tr>
       <td>textContent</td>
       <td>String</td>
       <td>'Your message here'</td>
       <td>To display text content</td>
-    </tr>
+    </tr> -->
     <tr>
       <td>timerExpires</td>
       <td>Number</td>
@@ -81,6 +81,36 @@ positionClasses = [
 paints = ["success", "warning", "danger"];
 ```
 
+## API definitions
+
+In order to use toast box, you need to define component `<ToastBox/>` in root file which will listen for events(success,danger,etc), for example i.e. `App.js`.
+
+Then when you want to show `error` or `success` message, just use `{toast}` method available from package. `toast.success('Yayy')`
+
+### ToastBox
+
+```js
+import ToastBox from "react-toastbox";
+.
+.
+.
+<ToastBox timerExpires={5000} position="top-right" pauseOnHover={true} intent="success"/>
+
+```
+
+### { toast }
+
+```js
+import { toast } from "react-toastbox";
+.
+.
+.
+handleClick = () => {
+  /* Then when you want to show toast, call method and pass argument as text to display*/
+  toast.success('Toast it up');
+}
+```
+
 ## Usage
 
 ```js
@@ -92,8 +122,8 @@ import "./styles.css";
 function App() {
   return (
     <div className="App">
+      {/* First define toastbox component which will listen to events*/}
       <ToastBox
-        textContent="Toast it up"
         timerExpires={5000}
         position="top-right"
         pauseOnHover={true}
@@ -101,7 +131,8 @@ function App() {
       />
       <button
         onClick={() => {
-          toast.success();
+          /* Then when you want to show toast, call method and pass argument as text to display*/
+          toast.success("Toast it up");
         }}
       >
         Show me toast

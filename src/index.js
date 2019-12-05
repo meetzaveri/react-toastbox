@@ -15,11 +15,13 @@ if (isElement === null) {
 const successEvent = new Event(events.SUCCESS);
 const dangerEvent = new Event(events.DANGER);
 
+let currentMsgToDisplay = "Your message here";
 console.log("events", events);
 class App extends React.Component {
   state = {
     show: false,
-    currentIntent: intents.PRIMARY
+    currentIntent: intents.PRIMARY,
+    textContent: ""
   };
 
   componentDidMount() {
@@ -28,9 +30,11 @@ class App extends React.Component {
     /* Add event listener for events of success and danger 
     and pass respective intents necessary */
     elem.addEventListener(events.SUCCESS, () =>
-      this.showToast(intents.SUCCESS)
+      this.showToast(intents.SUCCESS, currentMsgToDisplay)
     );
-    elem.addEventListener(events.DANGER, () => this.showToast(intents.DANGER));
+    elem.addEventListener(events.DANGER, () =>
+      this.showToast(intents.DANGER, currentMsgToDisplay)
+    );
   }
 
   componentWillUnmount() {
@@ -40,8 +44,8 @@ class App extends React.Component {
     elem.removeEventListener(events.DANGER, this.closeToast);
   }
 
-  showToast = intent => {
-    this.setState({ show: true, currentIntent: intent });
+  showToast = (intent, text) => {
+    this.setState({ show: true, currentIntent: intent, textContent: text });
   };
 
   closeToast = () => {
@@ -61,6 +65,7 @@ class App extends React.Component {
         {this.state.show && (
           <Toaster
             {...this.props}
+            textContent={this.state.textContent}
             intent={this.state.currentIntent}
             closeToast={this.closeToast}
           />
@@ -75,17 +80,20 @@ export default App;
 const elem = document.getElementById("toast-root");
 
 export const toast = {
-  success: function() {
+  success: function(param) {
+    /* Set local variable to passed parameter value */
+    currentMsgToDisplay = param;
     elem.dispatchEvent(successEvent);
   },
-  error: function() {
-    console.log("error", elem);
+  error: function(param) {
+    /* Set local variable to passed parameter value */
+    currentMsgToDisplay = param;
     elem.dispatchEvent(dangerEvent);
   }
 };
 
 // setTimeout(() => {
-//   toast.error();
+//   toast.error("Please hack");
 // }, 2000);
 const rootElement = document.getElementById("toast-root");
 // ReactDOM.render(<App />, rootElement);
