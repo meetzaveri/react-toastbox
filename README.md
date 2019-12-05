@@ -14,7 +14,7 @@ npm install react-toastbox
 
 ## Codesandbox demo
 
-[![Edit react-toastbox-demo](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/react-new?fontsize=14&hidenavigation=1&theme=dark)
+[Live Demo](https://codesandbox.io/s/epic-currying-62r0y)
 
 ## Screenshots
 
