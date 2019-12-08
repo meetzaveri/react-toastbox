@@ -1,6 +1,6 @@
 {
   "name": "react-toastbox",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "description": "A minimal react toast box inspired by reddit's toast message design and react-toastify.",
   "author": "Meet Zaveri",
   "license": "MIT",
@@ -8,7 +8,15 @@
     "type": "git",
     "url": "https://github.com/meetzaveri/react-toastbox.git"
   },
-  "keywords": [],
+  "keywords": [
+    "react",
+    "notification",
+    "toast",
+    "react-component",
+    "react-toastbox",
+    "push",
+    "alert"
+  ],
   "dependencies": {
     "classnames": "2.2.6",
     "prop-types": "^15.7.2",
