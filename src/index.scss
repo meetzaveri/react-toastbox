@@ -1,8 +1,8 @@
 @import "./common.scss";
 
 $success_color: #32b67a;
-$error_color: #ff0000;
-$primary_color: #0079d3;
+$error_color: #db3737;
+$primary_color: #137cbd;
 
 .App {
   font-family: inherit;
@@ -126,7 +126,7 @@ $primary_color: #0079d3;
   color: #000;
   -ms-flex: 1;
   flex: 1;
-  margin: 0 12px;
+  margin: 10px 12px;
   text-align: left;
   align-self: center;
 }
