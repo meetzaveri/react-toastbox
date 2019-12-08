@@ -81,7 +81,7 @@ positionClasses = [
 paints = ["success", "warning", "danger"];
 ```
 
-## API definitions
+## Quick API tour
 
 In order to use toast box, you need to define component `<ToastBox/>` in root file which will listen for events(success,danger,etc), for example i.e. `App.js`.
 
@@ -112,6 +112,55 @@ handleClick = () => {
 ```
 
 ## Usage
+
+- Use `<ToastBox />` once in your app which listens to events such as success,error,etc...
+  So in your root component(mainly `App.js` or `main.js`), register this component with suitable props acc. to your needs
+
+#### Parent (App.js)
+
+```js
+import React from "react";
+import ToastBox from "react-toastbox";
+
+/* Your root app logic here */
+.
+.
+.
+ <ToastBox
+    timerExpires={5000}
+    position="top-right"
+    pauseOnHover={true}
+  />
+
+
+```
+
+- Then you can call any methods such as `success`,`error`,etc... from your `children`. The `<ToastBox />` will listen to event and propagate changes.
+
+#### Child(childToRender.js)
+
+```js
+import React from "react";
+import { toast } from "react-toastbox";
+
+function Child() {
+  return (
+    <div className="App">
+      <button
+        onClick={() => {
+          /* Then when you want to show toast, call method and pass argument as text to display*/
+          toast.success("Toast it up");
+        }}
+      >
+        Show me toast
+      </button>
+    </div>
+  );
+}
+export default Child;
+```
+
+In Nutshell,
 
 ```js
 import React from "react";
