@@ -4,7 +4,7 @@ A minimal react toast box inspired by reddit's toast message design and react-to
 
 ## Installation
 
-[![NPM version](https://img.shields.io/badge/npm-1.0.4-brightgreen.svg)](https://www.npmjs.com/package/react-toastbox)
+[![NPM version](https://img.shields.io/badge/npm-1.2.6-brightgreen.svg)](https://www.npmjs.com/package/react-toastbox)
 
 Using npm:
 
