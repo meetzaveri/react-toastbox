@@ -22,7 +22,9 @@ npm install react-toastbox
 
 ## API
 
-### props
+### `<ToastBox />`
+
+#### Properties
 
 <table class="table table-bordered table-striped">
   <thead>
@@ -66,6 +68,15 @@ npm install react-toastbox
     </tr>
   </tbody>
 </table>
+
+### `toast`
+
+#### Methods
+
+`toast` is object containing methods for success and error(More to come soon).
+
+- `toast.error('Error')` - Showing error toast message
+- `toast.success('Success')` - Showing success toast message
 
 ## Possible values for API
 
