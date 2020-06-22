@@ -12,6 +12,35 @@ Using npm:
 npm install react-toastbox
 ```
 
+## How to use
+
+1. Import main `Toastbox` from lib and you need to inject it once in your main bootstrapped file.
+
+`main.js`
+
+```js
+import ToastBox from "react-toastbox";
+.
+.
+.
+<ToastBox timerExpires={5000} position="top-right" pauseOnHover={true} intent="success"/>
+
+```
+
+2. To use it in action, import `toast` method to call your toast message on screen.
+
+`child.js`
+```js
+import { toast } from "react-toastbox";
+.
+.
+.
+handleClick = () => {
+  /* Then when you want to show toast, call method and pass argument as text to display*/
+  toast.success('Toast it up');
+}
+```
+
 ## Codesandbox demo
 
 [Live Demo](https://codesandbox.io/s/epic-currying-62r0y)
@@ -30,6 +59,7 @@ npm install react-toastbox
   <thead>
   <tr>
     <th style="width: 60px;">name</th>
+    <th style="width: 50px;">required</th>
     <th style="width: 50px;">type</th>
     <th style="width: 10px;">default</th>
     <th>description</th>
@@ -44,24 +74,28 @@ npm install react-toastbox
     </tr> -->
     <tr>
       <td>timerExpires</td>
+      <td>no</td>
       <td>Number</td>
       <td>6000(in 'ms')</td>
       <td>Expiration time till toast message should be visible</td>
     </tr>
     <tr>
       <td>pauseOnHover</td>
+      <td>no</td>
       <td>Boolean</td>
       <td>true</td>
       <td>On hovering toast, it's timer should be paused</td>
     </tr>
     <tr>
       <td>position</td>
+      <td>no</td>
       <td>String</td>
       <td>'top-right'</td>
       <td>Position for toast to be displayed.</td>
     </tr>
     <tr>
       <td>intent</td>
+      <td>no</td>
       <td>String</td>
       <td>'primary'</td>
       <td> Theme for toast message </td>
@@ -127,49 +161,6 @@ handleClick = () => {
 - Use `<ToastBox />` once in your app which listens to events such as success,error,etc...
   So in your root component(mainly `App.js` or `main.js`), register this component with suitable props acc. to your needs
 
-#### Parent (App.js)
-
-```js
-import React from "react";
-import ToastBox from "react-toastbox";
-
-/* Your root app logic here */
-.
-.
-.
- <ToastBox
-    timerExpires={5000}
-    position="top-right"
-    pauseOnHover={true}
-  />
-
-
-```
-
-- Then you can call any methods such as `success`,`error`,etc... from your `children`. The `<ToastBox />` will listen to event and propagate changes.
-
-#### Child(childToRender.js)
-
-```js
-import React from "react";
-import { toast } from "react-toastbox";
-
-function Child() {
-  return (
-    <div className="App">
-      <button
-        onClick={() => {
-          /* Then when you want to show toast, call method and pass argument as text to display*/
-          toast.success("Toast it up");
-        }}
-      >
-        Show me toast
-      </button>
-    </div>
-  );
-}
-export default Child;
-```
 
 In Nutshell,
 
